@@ -1,0 +1,46 @@
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    padding: 8px 30px;
+    font-weight: $font-weight-bold;
+    color: $secondary;
+    border-radius: 0;
+    border: 3px solid $secondary;
+    background-color: transparent;
+    clip-path: polygon(100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0% 0, 0 0);
+    transition: ease 0.3s;
+    span {
+        position: relative;
+        z-index: 1;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 20px;
+        height: 20px;
+        border: 3px solid;
+        transform: rotate(45deg) translateX(15px);
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 130%;
+        height: 100%;
+        transform: translateX(-150%) skew(-45deg, 0);
+        transition: all ease 0.3s;
+        transform-origin: top;
+        background-color: $secondary;
+    }
+    &:hover {
+        border-color: $secondary;
+        background-color: transparent;
+        color: $white;
+        &:after {            
+            transform: translateX(0) skew(-45deg, 0);
+        }
+    }
+}

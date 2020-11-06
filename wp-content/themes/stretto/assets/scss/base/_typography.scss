@@ -1,0 +1,81 @@
+html {
+	font-size: $base + px;
+}
+  
+.container {
+	&-fluid {
+		padding-right: ($container-gutter-width / 2);
+		padding-left: ($container-gutter-width / 2);
+	}
+}
+
+h1,
+.h1 {
+	margin-bottom: pxtorem(42);
+	line-height: pxtorem(92.4);
+	@include media-breakpoint-down(md) {
+		font-size: pxtorem(44);
+		line-height: pxtorem(44);
+	}
+}
+
+h2,
+.h2 {
+	margin-bottom: pxtorem(42);
+	font-weight: $font-weight-light;
+	line-height: pxtorem(72);
+	@include media-breakpoint-down(md) {
+		font-size: pxtorem(30);
+		line-height: pxtorem(36);
+	}
+}
+
+h3,
+.h3 {
+	margin-bottom: pxtorem(37);
+	font-weight: $font-weight-light;
+	line-height: pxtorem(46.8);
+	@include media-breakpoint-down(md) {
+		font-size: pxtorem(21);
+		line-height: pxtorem(27.3);
+	}
+}
+
+h4,
+.h4 {
+	margin-bottom: pxtorem(41);
+	font-weight: $font-weight-bold;
+	line-height: pxtorem(46.8);
+	@include media-breakpoint-down(md) {
+		font-size: pxtorem(21);
+		line-height: pxtorem(27.3);
+	}
+}
+
+h5,
+.h5 {
+	margin-bottom: pxtorem(40);
+	line-height: pxtorem(26.4);
+	@include media-breakpoint-down(md) {
+		font-size: pxtorem(18);
+		line-height: pxtorem(19.8);
+	}
+}
+
+h6,
+.h6 {
+	margin-bottom: pxtorem(42);
+	font-weight: $font-weight-bold;
+	line-height: pxtorem(26);
+	@include media-breakpoint-down(md) {
+		font-size: pxtorem(16);
+		line-height: pxtorem(20.8);
+	}
+}
+
+p {
+	line-height: pxtorem(23.4);
+	@include media-breakpoint-down(md) {
+		line-height: pxtorem(20.8);
+	}
+}

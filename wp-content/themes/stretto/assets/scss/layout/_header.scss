@@ -1,0 +1,129 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+/*--- header ---*/
+.main-header {
+	width: 100%;
+	height: auto;
+	background-color: $fine-gray;
+	/* nav */
+	.navigation {
+		height: auto;
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			ul {
+				position: absolute;
+				left: 50%;
+				top: 100%;
+				padding: 13px 0;
+				visibility: hidden;
+				opacity: 0;
+				pointer-events: none;
+				min-width: 183px;
+    			transform: translateX(-50%);
+				background-color: $primary;
+				box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+				ul {
+					position: relative;
+					left: auto;
+					padding: 5px 15px;
+					transform: none;
+					background-color: inherit;
+					box-shadow: none;
+					a {
+						font-weight: $font-weight-normal;
+					}
+				}
+				li {
+					margin: 0;
+					a {
+						width: 100%;
+						padding: 5px 15px;
+						color: $white;
+						font-size: $font-size-sm;
+					}
+				}
+			}
+			li {
+				position: relative;
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				&.has-submenu {
+					>a {
+						display: flex;
+						align-items: center;
+						&:after {
+							margin-left: 8px;
+							@include icon-font("\61");
+							transition: ease 0.3s;
+						}
+					}
+				}
+				&:hover {
+					ul {
+						visibility: visible;
+						opacity: 1;
+						pointer-events: all;
+					}
+					&.has-submenu {
+						>a {
+							color: $secondary;
+							&:after {
+								transform: rotate(180deg);
+							}
+						}
+					}
+				}
+				a {
+					text-decoration: none;
+					display: block;
+					transition: ease 0.3s;
+					&:hover {
+						color: $secondary;
+					}
+				}
+			}
+		}
+	}
+}
+
+.header-utility-menu {
+	background-color: $light-gray;
+	.navigation {
+		ul {
+			li {
+				margin: 0 pxtorem(30);
+				a {
+					font-size: $font-size-sm;
+				}
+			}
+		}
+	}
+	@at-root .experience-dropdown {
+		border-left: 1px solid rgba($dark-slate, 0.25);		
+		p {
+			font-size: $font-size-sm;
+		}
+		.custom-dropdown {
+			margin-left: 10px;
+		}
+	}
+}
+
+.header-main-menu {
+	.navigation {
+		ul {
+			li {
+				margin: 0 pxtorem(30);
+				a {
+					font-weight: $font-weight-medium;
+				}
+			}
+		}
+	}
+}

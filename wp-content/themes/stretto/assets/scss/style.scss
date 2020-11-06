@@ -1,0 +1,18 @@
+/* theme fonts goes here */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+// variable and mixin
+@import 'abstracts/_core' ;
+
+// bs4 vender 
+@import 'vendors/bootstrap/bootstrap';
+@import 'vendors/select2';
+
+// base
+@import 'base/_core';
+
+// layout
+@import 'layout/_core';
+
+// components
+@import 'components/_core'

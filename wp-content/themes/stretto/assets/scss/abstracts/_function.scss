@@ -1,0 +1,19 @@
+$base : 18; //18px
+
+//use font-size:pxtoem(11);
+@function pxtoem($target, $context: $base) {
+  @return ($target / $context)+0em;
+}
+
+@function pxtorem($target, $context: $base) {
+  @return ($target / $context)+0rem;
+}
+
+@function rem($target, $context: $base) {
+  @return ($target / $context);
+}
+
+// aspect-ratio
+@function aspect-ratio($width, $height) {
+  @return ($height/$width) * 100%;
+}
